@@ -10,15 +10,16 @@ class Search extends Component {
 	}
 	handleSubmit = (e) => {
     e.preventDefault()
-    // this.handleUserSearch(this.state.userSearch)
-    console.log(this.state.userSearch)
+    this.props.getResults(this.state.userSearch)
+    // console.log(this.state.userSearch)
   }
     handleInput = (e) => {
     this.setState ({
-      userSearch: e.currentTarget.value
+      [e.currentTarget.name]: e.currentTarget.value
     })
   }
     render(){
+    	console.log(this.state)
         return(
           <form onSubmit={this.handleSubmit}>
           	<input type="text" name="userSearch" onChange={this.handleInput}value={this.state.userSearch} placeholder="Search.."/>
