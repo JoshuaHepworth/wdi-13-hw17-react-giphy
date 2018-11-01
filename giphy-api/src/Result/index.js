@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-
+import {Grid} from 'semantic-ui-react'
 
 class Results extends Component {
 	constructor(){
@@ -14,10 +14,10 @@ class Results extends Component {
     	const gifs = this.props.gifs.map((gif, i) => {
     			return (
     				<div>
-    				<iframe src={gif.embed_url} width="480" height="355" frameBorder="0" class="giphy-embed" allowFullScreen>
+    				<iframe class="gif-pics"src={gif.embed_url} width="480" height="355" frameBorder="0" class="giphy-embed" allowFullScreen>
     				</iframe>
     				<p>
-    				<a href={gif.url}>via GIPHY</a>
+    				<a class="gifs"href={gif.url}>via GIPHY</a>
     				</p>
     				</div>
     				)
@@ -25,8 +25,12 @@ class Results extends Component {
     	console.log(this.getResults)
         return (
         	<div>
-        	<h2>result</h2>
-        	{gifs}
+        	<Grid container columns={10} textAlign='center' verticalAlign='top'>
+        		<Grid.Column style={{maxWidth: 450}}>
+        		<h2>result</h2>
+        		{gifs}
+	        </Grid.Column>
+	      </Grid>
         	</div>
         )
     }

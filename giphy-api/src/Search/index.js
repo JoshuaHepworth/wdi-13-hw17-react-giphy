@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-
+import {Button, Icon, Form} from 'semantic-ui-react'
 
 class Search extends Component {
 	constructor(){
@@ -23,7 +23,7 @@ class Search extends Component {
         return(
           <form onSubmit={this.handleSubmit}>
           	<input type="text" name="userSearch" onChange={this.handleInput}value={this.state.userSearch} placeholder="Search.."/>
-            <button type="submit">Search</button>
+            <Button fluid icon="trash alternate outline" verticalAlign="middle" style={{maxWidth: 300}} type="submit" value="Search"/>
         	</form>
         )
     }
