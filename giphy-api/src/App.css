@@ -1,6 +1,9 @@
 body {
   background-color: black;
 }
+img {
+  height: 150px;
+}
 h1 {
   color: white;
   text-decoration: underline;

@@ -27,7 +27,7 @@ class Results extends Component {
         	<div>
         	{/*<Grid container columns={10} textAlign='center' verticalAlign='top'>*/}
         
-        		<h2>result</h2>
+        		
         		{gifs}
 	      
 	      

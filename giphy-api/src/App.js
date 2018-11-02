@@ -41,7 +41,7 @@ class App extends Component {
 
     return (
       <div className="App">
-        <h1>Giphy search</h1>
+    <h1>Giphy search</h1>
         <img src="https://vignette.wikia.nocookie.net/epicrapbattlesofhistory/images/c/c2/Peanut-butter-jelly-time.gif/revision/latest?cb=20141129150614"/>
         <Search getResults={this.getResults}handleUserSearch={this.handleUserSearch} searchFunc={this.getGifs}/>
         <Result getResults={this.getResults} gifs={this.state.gifs}/>
