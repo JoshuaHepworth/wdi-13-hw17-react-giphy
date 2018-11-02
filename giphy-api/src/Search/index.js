@@ -21,10 +21,12 @@ class Search extends Component {
     render(){
     	console.log(this.state)
         return(
-          <form onSubmit={this.handleSubmit}>
-          	<input type="text" name="userSearch" onChange={this.handleInput}value={this.state.userSearch} placeholder="Search.."/>
-            <Button fluid icon="trash alternate outline" verticalAlign="middle" style={{maxWidth: 300}} type="submit" value="Search"/>
-        	</form>
+          <Form textAlign="middle" onSubmit={this.handleSubmit}>
+          	<Form.Input type="text" name="userSearch" onChange={this.handleInput}value={this.state.userSearch} placeholder="Search.."/>
+          	<div class='button-search'>
+            <Button color="green" fluid icon="eye" verticalAlign="middle" style={{maxWidth: 300}} type="submit" value="Search"/>
+        		</div>
+        	</Form>
         )
     }
 }

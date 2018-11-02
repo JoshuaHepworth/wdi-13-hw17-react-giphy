@@ -25,12 +25,12 @@ class Results extends Component {
     	console.log(this.getResults)
         return (
         	<div>
-        	<Grid container columns={10} textAlign='center' verticalAlign='top'>
-        		<Grid.Column style={{maxWidth: 450}}>
+        	{/*<Grid container columns={10} textAlign='center' verticalAlign='top'>*/}
+        
         		<h2>result</h2>
         		{gifs}
-	        </Grid.Column>
-	      </Grid>
+	      
+	      
         	</div>
         )
     }
